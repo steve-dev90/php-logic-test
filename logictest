@@ -1,4 +1,29 @@
 #!/Applications/MAMP/bin/php/php7.0.32/bin/php
 <?php
-  print "hello world"
+/* This script will:
+• Output the numbers from 1 to 100;
+• Where the number is divisible by three (3) output the word “foo”;
+• Where the number is divisible by five (5) output the word “bar”;
+• Where the number is divisible by three (3) and (5) output the word “foobar”;
+• Only be a single PHP file. */
+
+function process_numbers() {
+  $numbers = range(1, 15);
+  foreach ($numbers as $number) {
+    print processed_output($number);
+  }
+}
+
+function processed_output($number) {
+  if ($number % 3 == 0 && $number % 5 == 0)
+    return "foobar \n";
+  elseif ($number % 3 == 0)
+    return "foo \n";
+  elseif ($number % 5 == 0)
+    return "bar \n";
+  else
+    return "{$number}\n";
+}
+
+process_numbers()
 ?>
