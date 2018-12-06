@@ -8,21 +8,24 @@
 • Only be a single PHP file. */
 
 function process_numbers() {
-  $numbers = range(1, 15);
+  $numbers = range(1, 100);
   foreach ($numbers as $number) {
-    print processed_output($number);
+    if ($number == $numbers[count($numbers) - 1])
+      echo processed_output($number), "\n";
+    else
+      echo processed_output($number), ', ';
   }
 }
 
 function processed_output($number) {
   if ($number % 3 == 0 && $number % 5 == 0)
-    return "foobar \n";
+    return "foobar";
   elseif ($number % 3 == 0)
-    return "foo \n";
+    return "foo";
   elseif ($number % 5 == 0)
-    return "bar \n";
+    return "bar";
   else
-    return "{$number}\n";
+    return "{$number}";
 }
 
 process_numbers()
