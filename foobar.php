@@ -6,17 +6,20 @@
 • Where the number is divisible by five (5) output the word “bar”
 • Where the number is divisible by three (3) and (5) output the word “foobar”*/
 
-class LogicTest
+class Foobar
 {
   public function process_numbers() {
     $numbers = range(1, 100);
     foreach ($numbers as $number) {
-      $results[] = $this->processed_output($number);
+      if ($number == count($numbers)) {
+        echo $this->get_result($number) . "\n";
+      } else {
+        echo $this->get_result($number) . ', ';
+      }
     }
-    $this->output_result($results);
   }
 
-  private function processed_output($number) {
+  public function get_result($number) {
     if ($number % 3 == 0 && $number % 5 == 0) {
       return "foobar";
     }
@@ -28,13 +31,7 @@ class LogicTest
     }
     return "{$number}";
   }
-
-  private function output_result($results) {
-    foreach ($results as $result) {
-
-    }
-  }
 }
 
-$logic_test = new LogicTest();
-$logic_test->process_numbers();
+$foobar = new FooBar();
+$foobar->process_numbers();
