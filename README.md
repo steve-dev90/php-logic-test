@@ -11,4 +11,4 @@ _ Where the number is divisible by three (3) and (5) output the word â€œfoobarâ€
 ## Install instructions
 To install:
 1. Clone the repo on your machine : `https://github.com/steve-dev90/php-logic-test.git`.
-2. To run the test script : `phpunit FoobarTest.php`. This assumes that you have downloaded phpunit.phar onto your machine and included it into your $PATH.
+2. To run the test script : `phpunit FoobarTest.php`. This assumes that you have downloaded phpunit.phar onto your machine and included it on your $PATH.
