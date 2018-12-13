@@ -1,5 +1,5 @@
-#!/Applications/MAMP/bin/php/php7.0.32/bin/php
 <?php
+
 /* This script will:
 • Output numbers from 1 to 100
 • Where the number is divisible by three (3) output the word “foo”
@@ -21,13 +21,13 @@ class Foobar
 
   public function get_result($number) {
     if ($number % 3 == 0 && $number % 5 == 0) {
-      return "foobar";
+      return 'foobar';
     }
     if ($number % 3 == 0) {
-      return "foo";
+      return 'foo';
     }
     if ($number % 5 == 0) {
-      return "bar";
+      return 'bar';
     }
     return "{$number}";
   }
